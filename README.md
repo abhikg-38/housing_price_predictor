@@ -1,2 +1,6 @@
 # housing_price_predictor
-An ML project that uses various data preprocessing, visualization and regression techniques to predict median house price in a locality. 
+This project makes use of a variety of preprocessing methods to prepare the data. Correlation matrix is analyzed and median income is found to be the most relevant attribute in predicting house value. The income category is grouped into bins and the dataset is split into train and test sets by employing stratified split, which makes sure relevant dataset contains weighted distribution of instances. A scatter map of latitude and longitude is visualized and colored on the basis of housing price. A scatter matrix visualizes the variation of a cluster of attributes with each other.
+
+Seaparate pipelines are used to individually process both categorical and numerical attributes. OneHotEncoder is used for categorical attributes like "ocean proximity". KMeans clustering is employed for "latitude" and "longitude" attributes. Function transformers are used for feature engineering and they return new useful attributes like ratios etc. A column transfor groups all preprocessing tasks and relevant pipelines together. 
+
+Regression techniques like LinearRegression, RandomForestRegressor and Decision trees are employed for housing price prediction. Evaluation metrics like root mean square error and cross_val_score are used to evaluate the robustness of these algorithms. Hyperparameter optimization is done using GridSearchCV and RandomizedSearchCV.
